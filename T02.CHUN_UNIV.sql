@@ -245,7 +245,6 @@ WITH DEPT_NAME AS (SELECT T.DEPARTMENT_NAME, C.CLASS_NO
                                       FROM TB_DEPARTMENT
                                       WHERE DEPARTMENT_NAME = '환경조경학과')) T
                     WHERE C.DEPARTMENT_NO(+) = T.DEPARTMENT_NO)
-                    
 SELECT DEPARTMENT_NAME "계열 학과명", ROUND(SUM(POINT) / COUNT(POINT), 1) 전공평점
 FROM TB_GRADE G, DEPT_NAME D
 WHERE G.CLASS_NO = D.CLASS_NO
